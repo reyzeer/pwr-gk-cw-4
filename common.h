@@ -1,6 +1,6 @@
 /// Laboratorium: Grafika Komputerowa
 /// Prowadzący: Dr inż. Marek Woda
-/// Zadanie 1
+/// Zadanie 3
 /// Zbigniew Czarnecki 209909
 
 #pragma once

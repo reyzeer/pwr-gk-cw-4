@@ -1,6 +1,6 @@
 /// Laboratorium: Grafika Komputerowa
 /// Prowadzący: Dr inż. Marek Woda
-/// Zadanie 1
+/// Zadanie 3
 /// Zbigniew Czarnecki 209909
 
 #include "common.h"
@@ -175,29 +175,17 @@ void Egg::insertVertexWithColor(int i, int j)
 void Egg::drawTriangles()
 {
 
-//	float * red = new float [3];
-//	red[0] = 1.0f;
-//	red[1] = 0.0f;
-//	red[2] = 0.0f;
-//
-//	float * blue= new float [3];
-//	blue[0] = 0.0f;
-//	blue[1] = 0.0f;
-//	blue[2] = 1.0f;
-
 	glBegin(GL_TRIANGLES);
 
 	for (int i = 0; i < n - 1; i++) {
 		for (int j = 0; j < n - 1; j++) {
 
 			//Triangle
-			//glColor3fv(red);
 			insertVertexWithColor(i, j);
 			insertVertexWithColor(i, j + 1);
 			insertVertexWithColor(i + 1, j);
 
 			//Triangle
-			//glColor3fv(blue);
 			insertVertexWithColor(i, j + 1);
 			insertVertexWithColor(i + 1, j);
 			insertVertexWithColor(i + 1, j + 1);
@@ -241,7 +229,6 @@ void Egg::draw()
 		transform2Egg();
 
 		randColors();
-		//fourColors();
 		deleteSeam();
 
 		build = true;
